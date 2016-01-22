@@ -1,0 +1,16 @@
+﻿<div class="row"> <!--Everything-->
+    <div class="row" ng-repeat="genre in controller.genres"> <!--A Genre-->
+        <h1>{{genre.name}}</h1>
+        <div class="row"> <!--Movie List-->
+                                                  <!--Add a filter later-->
+            <div class="col-md-2" ng-repeat="movie in genre.movies">
+                <div class="row">
+                    <img class="img-responsive" ng-src="{{movie.posterUrl}}" />
+                </div>
+                <div class="row">
+                    <b>{{movie.title}}</b> <i>(){{movie.releaseDate.getFullYear()}})</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
